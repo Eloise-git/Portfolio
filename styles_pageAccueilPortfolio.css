@@ -1,0 +1,512 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Istok Web', sans-serif;
+    color: #000000;
+	background-color: #f8f8f8;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid #ddd;
+	background-color: #fcfcfc;
+}
+
+.menu-button {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.home-section {
+    height: 80vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+}
+
+.home-content {
+    max-width: 500px;
+	position: relative;
+    text-align: center;
+}
+
+.arrow-container {
+    position: absolute;
+    top: 20px;
+    left: -25%;
+}
+
+.arrow {
+	width: auto;
+    height: 400px;
+	transform: scaleX(-1) rotate(20deg);
+}
+
+.home-content h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    font-family: Italiana;
+    font-weight: Regular;
+    font-size: 50px;
+	white-space: nowrap;
+}
+
+.home-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.home-content img {
+    width: 250px;
+    border-radius: 250px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #333;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+section {
+    padding: 60px 20px;
+    margin-top: 60px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h1 {
+    font-family: 'Italiana', serif;
+    font-size: 70px;
+    width: 100%;
+    text-align: center;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+}
+.title h1 {
+    font-family: 'Italiana', serif;
+    font-size: 60px;
+    text-align: center;
+}
+
+.skills-section {
+    padding: 60px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.skills-section h1{
+	font-family: 'Italiana', serif;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.skills-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.skill {
+    max-width: 300px;
+    margin: 20px;
+	width: 30%;
+}
+
+.skill h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.skills-tables {
+    font-size: 20px;
+    margin-top: 30px;
+    color: #666;
+	text-decoration: none;
+}
+
+.skills-tables a{
+	text-decoration: none;
+	color: black;
+	
+}
+
+.skill-bar {
+    width: 100%;
+    background-color: #ededed;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 30px;
+    line-height: 30px;
+    color: white;
+    text-align: right;
+    padding-right: 10px;
+    border-radius: 20px;
+}
+
+.skill-level.html {
+    width: 90%;
+    background-color: #e3775b;
+}
+
+.skill-level.css {
+    width: 85%;
+    background-color: #5975e3;
+}
+
+.skill-level.js {
+    width: 80%;
+    background-color: #f1e172;
+    color: #323330;
+}
+
+.skill-level.csharp {
+    width: 60%;
+    background-color: #6ab35b;
+}
+
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: -250px;
+    background-color: #e8e8e8;
+    padding-top: 60px;
+    transition: left 0.5s ease;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #111;
+}
+
+.sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidenav.active {
+    left: 0;
+}
+
+.sidenav .close {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    cursor: default;
+}
+
+.burger-icon span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    border-radius: 100px;
+}
+
+.submenu {
+    display: none;
+    padding-left: 20px;
+}
+
+.submenu.active {
+    display: block;
+}
+.submenu a {
+    padding: 8px 8px 8px 50px;
+    font-size: 22px;
+}
+
+.sub_submenu a{
+	padding: 8px 8px 8px 65px;
+	font-size: 20px;
+}
+
+.arrow_menu {
+    font-size: 15px;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    line-height: normal;
+	padding-left: 10px;
+	padding-bottom: 3px;
+}
+
+/* Contact Section */
+#contact {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+#contact h1 {
+    font-family: 'Italiana', serif;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #666;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#contact button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #333;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact button:hover {
+    background-color: #555;
+}
+
+/* Projects Section */
+#projects {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+#projects h1{
+	font-family: 'Italiana', serif;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+	overflow: visible;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+	padding: 25px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+
+.card {
+    flex: 0 0 auto;
+    width: 300px;
+    margin: 0 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, z-index 0.3s;
+    z-index: 1;
+}
+
+.card img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card p {
+    padding: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+.carousel-button {
+    background: none;
+    border: none;
+    font-size: 36px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.carousel-button.prev {
+    left: 0;
+}
+
+.carousel-button.next {
+    right: 0;
+}
+
+.carousel-button:hover {
+    color: #000;
+}
+
+/* About Section */
+.about {
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
+
+.about h1 {
+    font-family: 'Italiana', serif;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    max-width: 900px;
+    margin: 20px;
+	text-align: justify;
+}
+
+.about-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.about-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,513 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Istok Web', sans-serif;
+    background-color: #f8f8f8;
+    color: #000000;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid #ddd;
+    background-color: #fcfcfc;
+    line-height: 1;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vh;
+}
+
+.title h1 {
+    font-family: 'Italiana', serif;
+    font-size: 60px;
+    text-align: center;
+}
+
+.menu-button {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: -250px;
+    background-color: #e8e8e8;
+    padding-top: 60px;
+    transition: left 0.5s ease;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #111;
+}
+
+.sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidenav.active {
+    left: 0;
+}
+
+.sidenav .close {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    cursor: default;
+}
+
+.burger-icon span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    border-radius: 100px;
+}
+
+.submenu {
+    display: none;
+    padding-left: 20px;
+}
+
+.submenu.active {
+    display: block;
+}
+.submenu a {
+    padding: 8px 8px 8px 50px;
+    font-size: 22px;
+}
+
+.sub_submenu a{
+	padding: 8px 8px 8px 65px;
+	font-size: 20px;
+}
+
+.arrow_menu {
+    font-size: 15px;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    line-height: normal;
+	padding-left: 10px;
+	padding-bottom: 3px;
+}
+
+
+.project-detail {
+    padding: 60px 20px;
+    margin-top: 60px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 60px auto;
+}
+
+.project-detail h1 {
+    font-family: 'Italiana', serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.project-detail img {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-detail .project-description,
+.project-detail .project-tech,
+.project-detail {
+    margin-bottom: 40px;
+}
+
+.project-detail h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #666;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.project-detail p,
+.project-detail ul {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.project-detail ul {
+    list-style-type: disc;
+    padding-left: 40px;
+}
+
+.project-detail a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.project-detail a:hover {
+    text-decoration: underline;
+}
+
+.project-description{
+	margin-top: 20px;
+}
+
+.project-description img{
+	width: 50%;
+	height: auto;
+}
+
+.description_img{
+	font-size: 13px;
+	text-align: center;
+	font-style: italic;
+	color: #666;
+}
+
+.competence-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.competence-table thead th {
+    background-color: #f2f2f2;
+    color: #333;
+    text-align: left;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.competence-table tbody td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: top;
+}
+
+.competence-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.competence-table tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+.competence-table tbody td.acquis {
+    background-color: #d1fbe3;
+    font-weight: bold;
+    color: #3fab45;
+}
+
+.competence-table tbody td.en-cours {
+    background-color: #fff9c4;
+    font-weight: bold;
+    color: #ffa500;
+}
+
+.ac-section {
+    margin-top: 20px;
+}
+
+.ac-content {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fcfcfc;
+}
+
+.toggle-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-size: 20px;
+    color: #666;
+    background-color: #efefef;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.toggle-btn p{
+    padding: 10px;
+    font-size: 15px;
+    color: #666;
+    background-color: #efefef;
+    text-align: left;
+	margin-bottom: 0px;
+}
+
+.toggle-btn:hover {
+    background-color: #a9a9a9;
+	color: #fff;
+}
+
+.toggle-btn:hover p{
+    background-color: #a9a9a9;
+	color: #fff;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* drawing Section */
+#drawing {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#drawing h1{
+    text-align: center;
+	font-family: 'Istok Web', sans-serif;
+    color: #666;
+	font-size: 24px;
+    margin-bottom: 10px;
+    color: #666;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+ .carousel-container {
+            overflow: hidden;
+            width: 50%;
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+.carousel1 {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.carousel1 .card {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel1-button {
+    background: none;
+    border: none;
+    font-size: 36px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.carousel1-button:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.carousel1-button.prev {
+    left: 0;
+}
+
+.carousel1-button.next {
+    right: 0;
+}
+
+.carousel1::-webkit-scrollbar {
+    display: none;
+}
+
+.card img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card p {
+    padding: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+.carousel1-button:hover {
+    color: #000;
+}
+
+.carousel2 {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.carousel2 .card {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel2-button {
+    background: none;
+    border: none;
+    font-size: 36px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.carousel2-button:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.carousel2-button.prev {
+    left: 0;
+}
+
+.carousel2-button.next {
+    right: 0;
+}
+
+.carousel2::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel2-button:hover {
+    color: #000;
+}
+
+.carousel3 {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.carousel3 .card {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel3-button {
+    background: none;
+    border: none;
+    font-size: 36px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.carousel3-button:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.carousel3-button.prev {
+    left: 0;
+}
+
+.carousel3-button.next {
+    right: 0;
+}
+
+.carousel3::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel3-button:hover {
+    color: #000;
+}
+
+.carousel4 {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.carousel4 .card {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel4-button {
+    background: none;
+    border: none;
+    font-size: 36px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.carousel4-button:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.carousel4-button.prev {
+    left: 0;
+}
+
+.carousel4-button.next {
+    right: 0;
+}
+
+.carousel4::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel4-button:hover {
+    color: #000;
+}
