@@ -34,6 +34,11 @@ header {
     text-align: center;
 }
 
+.title_link{
+	text-decoration: none;
+	color: black;
+}
+
 .menu-button {
     font-size: 24px;
     background: none;

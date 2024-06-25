@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet 1 - Portfolio</title>
-	<link rel="icon" href="logo.png" type="image/png">
+    <title>A1-C5 Tableaux de compétences - Portfolio</title>
+    <link rel="icon" href="logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles-projet.css">
+    <link rel="stylesheet" href="competences_style.css">
 </head>
 <body>
-   <header>
+	 <header>
         <nav>
 			<div id="mySidenav" class="sidenav">
 				<a id="closeBtn" class="close">×</a>
@@ -67,7 +67,7 @@
 			</a>
 		</nav>
 
-       <a class="title_link" href="index.html">
+        <a class="title_link" href="index.html">
 			<div class="title">
 				<img src="logo.png">
 				<h1>Portfolio</h1>
@@ -77,32 +77,90 @@
     </header>
     <main>
         <section class="project-detail">
-            <h1>Projet 1: Titre du Projet</h1>
-            <img src="ordi.jpg" alt="Projet 1">
-            <div class="project-description">
-                <h2>Description du projet</h2>
-                <p>Une description détaillée du projet, expliquant les objectifs, les technologies utilisées, les défis rencontrés et les résultats obtenus.</p>
+            <h1>Année 1 - Compétence 5 : Conduire un projet</h1>			
+			<table class="competence-table">
+				<thead>
+                    <tr>
+                        <th>Non acquis</th>
+                        <th>En cours d'acquisition</th>
+                        <th>Acquis</th>
+                    </tr>
+                </thead>
+				<tbody>
+					<tr>
+						<td>Comprend de façon erronée les attendus et répond mal aux besoins clients</td>
+						<td>Comprend globalement ce qui est techniquement atteignable, respecte le format du cahier des charges mais le livrable n'est pas complet</td>
+						<td class="acquis">Atteindre les objectifs fixés, suivre correctement le cahier des charges, adapte le cahier des charges en fonction des besoins</td>
+					</tr>
+					<tr>
+						<td>Ne met aucun outil de gestion de projet en place</td>
+						<td>Ne pas mettre en place un cahier des charges, et/ou omettre la mise en place de missions suffisamment claires, et/ou oublier d'avoir une marge de sécurité</td>
+						<td class="acquis">Remplir un cahier des charges de façon claire et précise et le respecter en l'adaptant au besoin, mettre en place une liste de choses à faire (adaptative)</td>
+					</tr>
+					<tr>
+						<td>Dépasser la limite de temps imposée et/ou négliger le soin de son travail</td>
+						<td>Répartir les tâches de manière incohérente par rapport aux compétences de chaque membre du projet</td>
+						<td class="acquis">Respecter les contraintes de temps imposée, et assurer la bonne répartition des tâches</td>
+					</tr>
+				</tbody>
+			</table>
+            <div class="ac-section">
+                <button class="toggle-btn">Apprentissage Critique 1</br><p>Appréhender les besoins du client et de l’utilisateur</p></button>
+                <div class="ac-content">
+                    <div class="project-description">
+                        <h2>Exemple</h2>
+                        <p>Projet S1.05 : Recueil de besoins</p>
+                        <p>Lors de ce projet, il était question de recueillir les besoins clients et de rédiger plusieurs livrables (cahier des charges, spécificatons, dossier de tests...)</p>
+                        <figure role="figure">
+                            <img src="A1_C5.png">
+                            <figcaption class="description_img">Exemple d'un tableau de mesures des risques pour un projet</figcaption>
+                        </figure>
+                    </div>
+                </div>
             </div>
-            <div class="project-tech">
-                <h2>Technologies utilisées</h2>
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                </ul>
+            <div class="ac-section">
+                <button class="toggle-btn">Apprentissage Critique 2</br><p>Mettre en place les outils de gestion de projet</p></button>
+                <div class="ac-content">
+                    <div class="project-description">
+                        <h2>Exemple</h2>
+                        <p>Projet S2.05 : Gestion d’un projet</p>
+                        <p>Durant ce projet, nous avons dû mettre en place des outils de gestion de projet comme un GANTT, un PERT... </p>
+                        <figure role="figure">
+                             <img src="A1_C5.png">
+							 <figcaption class="description_img">Exemple d'un tableau de mesures des risques pour un projet</figcaption></center>
+                        </figure>
+                    </div>
+                    <div class="project-tech">
+                        <h2>Technologies utilisées</h2>
+                        <ul>
+                            <li>SQL</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="project-links">
-                <h2>Liens et ressources</h2>
-                <p><a href="lien-du-projet.com">Voir le projet en ligne</a></p>
-                <p><a href="https://github.com/votre-repo">Code source sur GitHub</a></p>
+            <div class="ac-section">
+                <button class="toggle-btn">Apprentissage Critique 3</br><p>Identifier les acteurs et les différentes phases d’un cycle de développement</p></button>
+                <div class="ac-content">
+                    <div class="project-description">
+                        <h2>Exemple</h2>
+                        <p>Projet S2.05: Gestion d'un projet</p>
+						<p>Durant ce projet, nous avons dû identifier les acteurs du projet, et les différentes phases/p>
+						<figure role="figure">
+                            <img src="A1_C5.png">
+                            <figcaption class="description_img">Exemple d'un tableau de mesures des risques pour un projet</figcaption>
+                        </figure>
+					</div>
+                </div>
             </div>
         </section>
     </main>
-    <footer>
+	<footer>
         <p>&copy; 2024 Eloïse PROUTEAU QUEFFELEC. Tous droits réservés.</p>
     </footer>
+
     <script src="burger.js"></script>
-			<script>
+    <script src="toggle.js"></script>
+	<script>
 		document.addEventListener('DOMContentLoaded', function () {
     const openBtn = document.getElementById('openBtn');
     const closeBtn = document.getElementById('closeBtn');
@@ -152,5 +210,6 @@
 });
 
 	</script>
+
 </body>
 </html>

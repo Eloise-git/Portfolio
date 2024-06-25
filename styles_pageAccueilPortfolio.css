@@ -157,10 +157,16 @@ h1 {
     display: flex;
     align-items: center;
 }
+
 .title h1 {
     font-family: 'Italiana', serif;
     font-size: 60px;
     text-align: center;
+}
+
+.title_link{
+	text-decoration: none;
+	color: black;
 }
 
 .skills-section {
@@ -200,12 +206,6 @@ h1 {
     margin-top: 30px;
     color: #666;
 	text-decoration: none;
-}
-
-.skills-tables a{
-	text-decoration: none;
-	color: black;
-	
 }
 
 .skill-bar {
