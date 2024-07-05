@@ -14,13 +14,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 1.04% 2.08%;
     border-bottom: 1px solid #ddd;
 	background-color: #fcfcfc;
 }
 
 .menu-button {
-    font-size: 24px;
+    font-size: 1.25%;
     background: none;
     border: none;
     cursor: pointer;
@@ -29,7 +29,7 @@ header {
 main {
     display: flex;
     justify-content: center;
-    padding: 40px;
+    padding: 2.08%;
 }
 
 .home-section {
@@ -43,46 +43,46 @@ main {
 }
 
 .home-content {
-    max-width: 500px;
+    max-width: 27%;
 	position: relative;
     text-align: center;
 }
 
 .arrow-container {
     position: absolute;
-    top: 20px;
+    top: 3%;
     left: -25%;
 }
 
 .arrow {
 	width: auto;
-    height: 400px;
+    height: 30%;
 	transform: scaleX(-1) rotate(20deg);
 }
 
 .home-content h1 {
-    margin-bottom: 20px;
+    margin-bottom: 4%;
     text-align: center;
     width: 100%;
     font-family: Italiana;
     font-weight: Regular;
-    font-size: 50px;
+    font-size: 315%;
 	white-space: nowrap;
 }
 
 .home-content p {
     font-size: 1.2em;
-    margin-bottom: 20px;
+    margin-bottom: 4%;
 }
 
 .home-content img {
-    width: 250px;
-    border-radius: 250px;
+    width: 50%;
+    border-radius: 50%;
 }
 
 .btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 2% 4%;
     color: white;
     background-color: #333;
     border-radius: 5px;
@@ -95,10 +95,10 @@ main {
 }
 
 section {
-    padding: 60px 20px;
-    margin-top: 60px;
+    padding: 3.125% 1.04%;
+    margin-top: 3.125%;
     background-color: white;
-    border-radius: 5px;
+    border-radius: 0.26%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -108,23 +108,23 @@ form {
 }
 
 form label {
-    margin-top: 10px;
+    margin-top: 1.45%;
 }
 
 form input, form textarea {
-    padding: 10px;
-    margin-top: 5px;
+    padding: 1.5%;
+    margin-top: 1%;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 0.26%;
 }
 
 form button {
-    margin-top: 10px;
-    padding: 10px;
+    margin-top: 1.3%;
+    padding: 1.3%;
     background-color: #333;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.26%;
     cursor: pointer;
 }
 
@@ -134,7 +134,7 @@ form button:hover {
 
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 1%;
     background-color: #333;
     color: white;
     position: relative;
@@ -148,7 +148,7 @@ footer {
 
 h1 {
     font-family: 'Italiana', serif;
-    font-size: 70px;
+    font-size: 3.64%;
     width: 100%;
     text-align: center;
 }
@@ -160,7 +160,7 @@ h1 {
 
 .title h1 {
     font-family: 'Italiana', serif;
-    font-size: 60px;
+    font-size: 375%;
     text-align: center;
 }
 
@@ -169,17 +169,22 @@ h1 {
 	color: black;
 }
 
+.title_a{
+	text-decoration: none;
+	color: black;
+}
+
 .skills-section {
-    padding: 60px 20px;
+    padding: 3.125% 1.04%;
     background-color: white;
     text-align: center;
 }
 
 .skills-section h1{
 	font-family: 'Italiana', serif;
-    font-size: 50px;
+    font-size: 315%;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 1.04%;
     color: #333;
 }
 
@@ -190,20 +195,20 @@ h1 {
 }
 
 .skill {
-    max-width: 300px;
-    margin: 20px;
+    max-width: 16%;
+    margin: 1.04%;
 	width: 30%;
 }
 
 .skill h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 150%;
+    margin-bottom: 2%;
     color: #666;
 }
 
 .skills-tables {
-    font-size: 20px;
-    margin-top: 30px;
+    font-size: 125%;
+    margin-top: 1.5625%;
     color: #666;
 	text-decoration: none;
 }
@@ -216,7 +221,7 @@ h1 {
 }
 
 .skill-level {
-    height: 30px;
+    height: 1.5625%;
     line-height: 30px;
     color: white;
     text-align: right;
@@ -509,4 +514,37 @@ h1 {
 .about-text p {
     font-size: 18px;
     margin-bottom: 20px;
+}
+
+.submenu a,
+.sub_submenu a {
+    display: inline-block;
+    width: 100%; /* Assure que le lien occupe toute la largeur disponible */
+    white-space: nowrap; /* Empêche le texte de passer à la ligne */
+    overflow: hidden; /* Cache le texte qui dépasse */
+    text-overflow: ellipsis; /* Affiche "..." à la fin du texte coupé */
+}
+
+/* Ajouté pour des sous-sous-menus */
+.submenu .has-submenu > a {
+  cursor: pointer;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #e8e8e8;
+    overflow-y: auto; /* Activer le défilement vertical */
+    transition: 0.5s;
+    padding-top: 60px;
+    max-height: 100%; /* Hauteur maximale */
+}
+
+.sidenav.active {
+    width: 250px;
+    max-height: 100%; /* Réglage de la hauteur maximale */
 }

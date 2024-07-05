@@ -9,6 +9,9 @@ body {
     background-color: #f8f8f8;
     color: #000000;
     line-height: 1.6;
+	color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -17,7 +20,8 @@ header {
     align-items: center;
     padding: 20px 40px;
     border-bottom: 1px solid #ddd;
-    background-color: #fcfcfc;
+	background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     line-height: 1;
 }
 
@@ -32,6 +36,8 @@ header {
     font-family: 'Italiana', serif;
     font-size: 60px;
     text-align: center;
+	color: #333;
+	margin: 0;
 }
 
 .title_link{
@@ -47,55 +53,72 @@ header {
 }
 
 .sidenav {
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: -250px;
-    background-color: #e8e8e8;
-    padding-top: 60px;
-    transition: left 0.5s ease;
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: -250px;
+  background-color: #e8e8e8;
+  padding-top: 60px;
+  transition: left 0.5s ease;
+  overflow-y: auto;
+  max-height: 100vh;
 }
 
 .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
 }
 
 .sidenav a:hover {
-    color: #111;
+  color: #111;
 }
 
 .sidenav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .sidenav.active {
-    left: 0;
+  left: 0;
 }
 
 .sidenav .close {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    cursor: default;
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  cursor: default;
 }
 
 .burger-icon span {
-    display: block;
-    width: 35px;
-    height: 5px;
-    background-color: black;
-    margin: 6px 0;
-    border-radius: 100px;
+  display: block;
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+  border-radius: 100px;
+}
+
+.has-submenu > a {
+  cursor: pointer;
+}
+
+.arrow_menu {
+  font-size: 0.7em;
+  margin-left: 10px;
+}
+
+
+/* Ajouté pour des sous-sous-menus */
+.submenu .has-submenu > a {
+  cursor: pointer;
 }
 
 .submenu {
@@ -115,6 +138,16 @@ header {
 	padding: 8px 8px 8px 65px;
 	font-size: 20px;
 }
+
+.submenu a,
+.sub_submenu a {
+    display: inline-block;
+    width: 100%; /* Assure que le lien occupe toute la largeur disponible */
+    white-space: nowrap; /* Empêche le texte de passer à la ligne */
+    overflow: hidden; /* Cache le texte qui dépasse */
+    text-overflow: ellipsis; /* Affiche "..." à la fin du texte coupé */
+}
+
 
 .arrow_menu {
     font-size: 15px;
@@ -536,35 +569,241 @@ footer {
     color: #000;
 }
 
-.submenu a,
-.sub_submenu a {
-    display: inline-block;
-    width: 100%; /* Assure que le lien occupe toute la largeur disponible */
-    white-space: nowrap; /* Empêche le texte de passer à la ligne */
-    overflow: hidden; /* Cache le texte qui dépasse */
-    text-overflow: ellipsis; /* Affiche "..." à la fin du texte coupé */
+.competence-section {
+  padding: 60px 20px;
+  margin-top: 60px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 60px auto;
+  text-align: center;
 }
 
-/* Ajouté pour des sous-sous-menus */
-.submenu .has-submenu > a {
-  cursor: pointer;
+.competence-section h1 {
+  font-family: 'Italiana', serif;
+  font-size: 48px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
 }
 
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #e8e8e8;
-    overflow-y: auto; /* Activer le défilement vertical */
-    transition: 0.5s;
-    padding-top: 60px;
-    max-height: 100%; /* Hauteur maximale */
+.competence-section p {
+  font-size: 18px;
+  margin-bottom: 40px;
 }
 
-.sidenav.active {
-    width: 250px;
-    max-height: 100%; /* Réglage de la hauteur maximale */
+
+.competence-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Espacement entre les cartes de compétences */
 }
+
+.competence-card {
+  flex: 1 1 300px; /* Taille flexible des cartes, ajustez selon vos besoins */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.competence-card h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.competence-card ul {
+  padding-left: 20px;
+}
+
+.competence-card ul li {
+  margin-bottom: 8px;
+  list-style: none;
+  text-align: start;
+}
+
+.competence-card ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+}
+
+.competence-card ul li a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+        
+
+        
+
+        @media screen and (max-width: 768px) {
+            nav {
+                display: block;
+            }
+
+            .menu-button {
+                display: block;
+                font-size: 24px;
+                background: none;
+                border: none;
+                cursor: pointer;
+            }
+
+            .sidenav {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: #e8e8e8;
+                overflow-y: auto;
+                transition: 0.5s;
+                padding-top: 60px;
+            }
+
+            .sidenav.active {
+                width: 250px;
+            }
+
+            .sidenav a {
+                padding: 10px 8px 10px 32px;
+                text-decoration: none;
+                font-size: 20px;
+                color: #818181;
+                display: block;
+                transition: 0.3s;
+            }
+
+            .sidenav a:hover {
+                color: #111;
+            }
+
+            .sidenav ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .sidenav .close {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                cursor: pointer;
+            }
+
+            .burger-icon span {
+                display: block;
+                width: 35px;
+                height: 5px;
+                background-color: black;
+                margin: 6px 0;
+                border-radius: 100px;
+            }
+
+            .competence-section {
+                padding: 40px 20px;
+                margin-top: 40px;
+                background-color: #fff;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                max-width: 800px;
+                margin: 40px auto;
+                text-align: center;
+            }
+
+            .competence-section h1 {
+                font-family: 'Italiana', serif;
+                font-size: 36px;
+                margin-bottom: 20px;
+                color: #333;
+            }
+
+            .competence-section p {
+                font-size: 18px;
+                margin-bottom: 30px;
+                color: #666;
+            }
+
+            .competence-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                gap: 20px;
+            }
+
+            .competence-card {
+                background-color: #fff;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                padding: 20px;
+                width: 300px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                text-align: left;
+                transition: transform 0.3s ease;
+            }
+
+            .competence-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            }
+
+            .competence-card h2 {
+                font-size: 24px;
+                margin-bottom: 10px;
+                color: #666;
+                border-bottom: 2px solid #ddd;
+                padding-bottom: 5px;
+            }
+
+            .competence-card ul {
+                list-style-type: disc;
+                padding-left: 20px;
+            }
+
+            .competence-card ul li {
+                margin-bottom: 8px;
+                font-size: 16px;
+            }
+
+            .competence-card ul li a {
+                color: #007BFF;
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
+
+            .competence-card ul li a:hover {
+                color: #0056b3;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }

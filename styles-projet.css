@@ -196,3 +196,36 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+.submenu a,
+.sub_submenu a {
+    display: inline-block;
+    width: 100%; /* Assure que le lien occupe toute la largeur disponible */
+    white-space: nowrap; /* Empêche le texte de passer à la ligne */
+    overflow: hidden; /* Cache le texte qui dépasse */
+    text-overflow: ellipsis; /* Affiche "..." à la fin du texte coupé */
+}
+
+/* Ajouté pour des sous-sous-menus */
+.submenu .has-submenu > a {
+  cursor: pointer;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #e8e8e8;
+    overflow-y: auto; /* Activer le défilement vertical */
+    transition: 0.5s;
+    padding-top: 60px;
+    max-height: 100%; /* Hauteur maximale */
+}
+
+.sidenav.active {
+    width: 250px;
+    max-height: 100%; /* Réglage de la hauteur maximale */
+}
