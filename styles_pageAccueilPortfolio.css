@@ -1,3 +1,4 @@
+/* Reset et styles de base */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,31 +8,34 @@
 body {
     font-family: 'Istok Web', sans-serif;
     color: #000000;
-	background-color: #f8f8f8;
+    background-color: #f8f8f8;
 }
 
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.04% 2.08%;
     border-bottom: 1px solid #ddd;
-	background-color: #fcfcfc;
+    background-color: #fcfcfc;
 }
 
 .menu-button {
-    font-size: 1.25%;
+    font-size: 1.25rem;
     background: none;
     border: none;
     cursor: pointer;
 }
 
+/* Main */
 main {
     display: flex;
     justify-content: center;
     padding: 2.08%;
 }
 
+/* Home Section */
 .home-section {
     height: 80vh;
     background: white;
@@ -44,35 +48,100 @@ main {
 
 .home-content {
     max-width: 27%;
-	position: relative;
+    position: relative;
     text-align: center;
 }
 
 .arrow-container {
     position: absolute;
-    top: 3%;
-    left: -25%;
+    top: 5%;
+    left: -55%;
 }
 
 .arrow {
-	width: auto;
+    width: auto;
     height: 30%;
-	transform: scaleX(-1) rotate(20deg);
+    transform: scaleX(-1) rotate(20deg);
 }
 
+.arrow_menu {
+    font-size: 15px;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    line-height: normal;
+    padding-left: 10px;
+    padding-bottom: 3px;
+}
+
+/* Media queries pour la réactivité */
+@media only screen and (max-width: 768px) {
+    .arrow-container {
+        left: -20%;
+    }
+
+    .arrow {
+        height: 20%;
+    }
+
+    .arrow_menu {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .arrow-container {
+        top: 8%;
+        left: -15%;
+    }
+
+    .arrow {
+        height: 15%;
+    }
+
+    .arrow_menu {
+        font-size: 10px;
+    }
+}
+
+/* Home Content */
 .home-content h1 {
     margin-bottom: 4%;
     text-align: center;
     width: 100%;
-    font-family: Italiana;
-    font-weight: Regular;
-    font-size: 315%;
-	white-space: nowrap;
+    font-family: Italiana, serif;
+    font-size: 3rem;
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+    .home-content h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-content h1 {
+        font-size: 1.2rem;
+    }
 }
 
 .home-content p {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     margin-bottom: 4%;
+}
+
+@media (max-width: 768px) {
+    .home-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-content p {
+        font-size: 0.8rem;
+    }
 }
 
 .home-content img {
@@ -80,9 +149,10 @@ main {
     border-radius: 50%;
 }
 
+/* Buttons */
 .btn {
     display: inline-block;
-    padding: 2% 4%;
+    padding: 1rem 1.5rem;
     color: white;
     background-color: #333;
     border-radius: 5px;
@@ -90,18 +160,32 @@ main {
     transition: background-color 0.3s;
 }
 
+@media (max-width: 768px) {
+    .btn{
+		padding: 0.5rem 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+		padding: 0.3rem 0.5rem;
+    }
+}
+
 .btn:hover {
     background-color: #555;
 }
 
+/* Sections */
 section {
     padding: 3.125% 1.04%;
     margin-top: 3.125%;
     background-color: white;
-    border-radius: 0.26%;
+    border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Formulaires */
 form {
     display: flex;
     flex-direction: column;
@@ -111,20 +195,21 @@ form label {
     margin-top: 1.45%;
 }
 
-form input, form textarea {
-    padding: 1.5%;
+form input,
+form textarea {
+    padding: 1rem;
     margin-top: 1%;
     border: 1px solid #ddd;
-    border-radius: 0.26%;
+    border-radius: 5px;
 }
 
 form button {
     margin-top: 1.3%;
-    padding: 1.3%;
+    padding: 0.8rem 1.6rem;
     background-color: #333;
     color: white;
     border: none;
-    border-radius: 0.26%;
+    border-radius: 5px;
     cursor: pointer;
 }
 
@@ -132,6 +217,7 @@ form button:hover {
     background-color: #555;
 }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 1%;
@@ -145,12 +231,20 @@ footer {
     align-items: center;
 }
 
+/* Titles */
+h1,
+.title h1,
+.about h1,
+.skills-section h1,
+.projects-section h1 {
+    font-family: 'Italiana', serif;
+    text-align: center;
+    color: #333;
+}
 
 h1 {
-    font-family: 'Italiana', serif;
-    font-size: 3.64%;
+    font-size: 3.64rem;
     width: 100%;
-    text-align: center;
 }
 
 .title {
@@ -159,31 +253,24 @@ h1 {
 }
 
 .title h1 {
-    font-family: 'Italiana', serif;
-    font-size: 375%;
-    text-align: center;
+    font-size: 3.75rem;
 }
 
-.title_link{
-	text-decoration: none;
-	color: black;
+.title_link,
+.title_a {
+    text-decoration: none;
+    color: black;
 }
 
-.title_a{
-	text-decoration: none;
-	color: black;
-}
-
+/* Skills Section */
 .skills-section {
     padding: 3.125% 1.04%;
     background-color: white;
     text-align: center;
 }
 
-.skills-section h1{
-	font-family: 'Italiana', serif;
-    font-size: 315%;
-    text-align: center;
+.skills-section h1 {
+    font-size: 3.15rem;
     margin-bottom: 1.04%;
     color: #333;
 }
@@ -197,20 +284,19 @@ h1 {
 .skill {
     max-width: 16%;
     margin: 1.04%;
-	width: 30%;
+    width: 30%;
 }
 
 .skill h2 {
-    font-size: 150%;
+    font-size: 1.5rem;
     margin-bottom: 2%;
     color: #666;
 }
 
 .skills-tables {
-    font-size: 125%;
+    font-size: 1.25rem;
     margin-top: 1.5625%;
     color: #666;
-	text-decoration: none;
 }
 
 .skill-bar {
@@ -250,6 +336,12 @@ h1 {
     background-color: #6ab35b;
 }
 
+.skill-level.python {
+    width: 75%;
+    background-color: #af4673;
+}
+
+/* Side Navigation */
 .sidenav {
     height: 100%;
     width: 250px;
@@ -302,6 +394,15 @@ h1 {
     border-radius: 100px;
 }
 
+.submenu a,
+.sub_submenu a {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .submenu {
     display: none;
     padding-left: 20px;
@@ -310,39 +411,32 @@ h1 {
 .submenu.active {
     display: block;
 }
+
 .submenu a {
     padding: 8px 8px 8px 50px;
     font-size: 22px;
 }
 
-.sub_submenu a{
-	padding: 8px 8px 8px 65px;
-	font-size: 20px;
+.sub_submenu a {
+    padding: 8px 8px 8px 65px;
+    font-size: 20px;
 }
 
-.arrow_menu {
-    font-size: 15px;
-    display: inline-block;
-    width: auto;
-    height: auto;
-    line-height: normal;
-	padding-left: 10px;
-	padding-bottom: 3px;
+.submenu .has-submenu > a {
+    cursor: pointer;
 }
 
 /* Contact Section */
 #contact {
-    padding: 60px 20px;
+    padding: 6rem 2rem;
     background-color: #ffffff;
     text-align: center;
 }
 
 #contact h1 {
     font-family: 'Italiana', serif;
-    font-size: 50px;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
+    font-size: 3.125rem;
+    margin-bottom: 2rem;
 }
 
 #contact form {
@@ -352,27 +446,27 @@ h1 {
 
 #contact label {
     display: block;
-    margin-bottom: 10px;
-    font-size: 18px;
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
     color: #666;
 }
 
 #contact input,
 #contact textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
+    padding: 1rem;
+    margin-bottom: 2rem;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 #contact button {
-    padding: 10px 20px;
+    padding: 1rem 2rem;
     border: none;
     background-color: #333;
     color: white;
-    font-size: 18px;
+    font-size: 1.125rem;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -384,17 +478,15 @@ h1 {
 
 /* Projects Section */
 #projects {
-    padding: 60px 20px;
+    padding: 6rem 2rem;
     background-color: #ffffff;
     text-align: center;
 }
 
-#projects h1{
-	font-family: 'Italiana', serif;
-    font-size: 50px;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
+#projects h1 {
+    font-family: 'Italiana', serif;
+    font-size: 3.125rem;
+    margin-bottom: 2rem;
 }
 
 .carousel-container {
@@ -402,14 +494,14 @@ h1 {
     justify-content: center;
     align-items: center;
     position: relative;
-	overflow: visible;
+    overflow: visible;
 }
 
 .carousel {
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
-	padding: 25px;
+    padding: 1.5625rem;
     transition: transform 0.5s ease-in-out;
 }
 
@@ -417,33 +509,15 @@ h1 {
     display: none;
 }
 
-
 .card {
     flex: 0 0 auto;
     width: 300px;
-    margin: 0 10px;
+    margin: 0 1rem;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out, z-index 0.3s;
     z-index: 1;
-}
-
-.card img {
-    width: 100%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-.card p {
-    padding: 20px;
-    font-size: 18px;
-    color: #333;
-}
-
-.card:hover {
-    transform: scale(1.1);
-    z-index: 10;
 }
 
 .carousel-button {
@@ -473,23 +547,20 @@ h1 {
 
 /* About Section */
 .about {
-    padding: 60px 20px;
+    padding: 6rem 2rem;
     background-color: #ffffff;
 }
 
 .about h1 {
     font-family: 'Italiana', serif;
-    font-size: 50px;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
+    font-size: 3.125rem;
+    margin-bottom: 2rem;
 }
 
 .about-content {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .about-image img {
@@ -502,49 +573,57 @@ h1 {
 .about-text {
     max-width: 900px;
     margin: 20px;
-	text-align: justify;
+    text-align: justify;
 }
 
 .about-text h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
     color: #666;
 }
 
 .about-text p {
-    font-size: 18px;
-    margin-bottom: 20px;
+    font-size: 1.125rem;
+    margin-bottom: 1.25rem;
 }
 
-.submenu a,
-.sub_submenu a {
-    display: inline-block;
-    width: 100%; /* Assure que le lien occupe toute la largeur disponible */
-    white-space: nowrap; /* Empêche le texte de passer à la ligne */
-    overflow: hidden; /* Cache le texte qui dépasse */
-    text-overflow: ellipsis; /* Affiche "..." à la fin du texte coupé */
+/* Media queries */
+@media only screen and (max-width: 768px) {
+    .about h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-text {
+        max-width: 100%;
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    .about-image img {
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
 }
 
-/* Ajouté pour des sous-sous-menus */
-.submenu .has-submenu > a {
-  cursor: pointer;
-}
+@media only screen and (max-width: 480px) {
+    .about h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
 
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #e8e8e8;
-    overflow-y: auto; /* Activer le défilement vertical */
-    transition: 0.5s;
-    padding-top: 60px;
-    max-height: 100%; /* Hauteur maximale */
-}
+    .about-text h2 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
 
-.sidenav.active {
-    width: 250px;
-    max-height: 100%; /* Réglage de la hauteur maximale */
+    .about-text p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
 }
